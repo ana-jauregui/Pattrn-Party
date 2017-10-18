@@ -29,7 +29,6 @@ $('.tab').click((e) => {
 $(window).resize( () => {
 
   if (window.matchMedia('(max-width: 750px)').matches) {
-    console.log('it works');
 
     $('.tab-content').children().each((i, el) => {
 
