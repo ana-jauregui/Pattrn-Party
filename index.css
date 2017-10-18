@@ -20,7 +20,7 @@ header span {
 
 .project-name {
   align-items: center;
-  font-size: 1.1em;
+  font-size: 1.5em;
   display: flex;
   padding: 40px;
   width: 100%;
@@ -28,7 +28,7 @@ header span {
 
 .project-name hr {
   margin: 0 20px 0 30px;
-  width: 80%;
+  width: 70%;
 }
 
 .accordion-tabs {
@@ -79,6 +79,10 @@ header span {
   padding: 15px;
 }
 
+.mobile-tab {
+  display: none;
+}
+
 .all-tab-content {
   display: flex;
   justify-content: space-around;
@@ -115,29 +119,50 @@ header span {
   background-color: #3F3244;
   color: #FFFFFF;
   display: flex;
-  height: 60px auto 30px auto;
+  height: 60px;
   justify-content: center;
-  margin: auto;
+  margin: 60px auto 30px auto;
   width: 300px;
 }
 
 @media screen and (max-width: 750px) {
+
+  .tab-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .hidden {
+    display: block;
+  }
+
+  .mobile-tab {
+    background: #F2F2F2;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .mobile-tab p {
+    padding: 8px 40px;
+  }
 
   .tabs {
     flex-direction: column;
   }
 
   .tab {
-    width: 100%;
-  }
-
-  .tab1-details {
     display: none;
   }
 
   .all-tab-content {
     align-items: center;
     flex-direction: column;
+  }
+
+  .mobile-hide {
+    display: none;
   }
 
   .picture {

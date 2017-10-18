@@ -25,4 +25,14 @@ $('.tab').click((e) => {
       $(`.${newClass}-details`).hide()
     })
   }
+
 })
+
+const check = () => {
+
+  if (window.matchMedia('(max-width: 750px)').matches) {
+    console.log('it works');
+  }
+}
+
+check();
