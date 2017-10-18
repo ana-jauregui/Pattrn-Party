@@ -10,7 +10,6 @@ $('.tab').click((e) => {
 
     $(`.${className}`).addClass('active')
 
-    //take active class off all non-selected tabs
     $(`.${className}`).siblings().each((idx, el)  => {
 
       const tabClass = $(el).text().split(' ').join('').toLowerCase()
@@ -18,7 +17,6 @@ $('.tab').click((e) => {
       $(`.${tabClass}`).removeClass('active')
     })
 
-    //hide all detailed content of non-selected tab
     target.siblings('div').each((i, elem) => {
 
       const newClass = ($(elem).text()).split(' ').join('').toLowerCase()
@@ -32,7 +30,6 @@ $(window).resize( () => {
 
   if (window.matchMedia('(max-width: 750px)').matches) {
     console.log('it works');
-
 
     $('.tab-content').children().each((i, el) => {
 
@@ -57,11 +54,9 @@ $(window).resize( () => {
             $(`.${className}-details`).hide()
           }
 
-          target.parent().siblings().each((i, elem) => {
-            if ($(elem).children().hasClass('all-tab-content')) {
-              // console.log(elem);
-            }
-          })
+          // target.parent().siblings().each((i, elem) => {
+          //   console.log($(elem).children());
+          // })
         }
     })
   // }

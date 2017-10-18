@@ -47,8 +47,6 @@ header span {
   width: 80%;
 }
 
-/*-------------- SELECTOR TABS ----------------------------*/
-
 .tabs {
   background: #FFFFFF;
   display: flex;
@@ -80,8 +78,6 @@ header span {
   cursor: pointer;
 }
 
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
 
 .tab-content {
   border: 1px solid #D1D2D3;
@@ -155,10 +151,6 @@ header span {
     flex-direction: column;
     padding: 0;
   }
-
-  /*.hidden {
-    display: block;
-  }*/
 
   .mobile-tab {
     background: #F2F2F2;
