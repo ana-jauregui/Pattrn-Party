@@ -42,84 +42,20 @@ header span {
   width: 75%;
 }
 
-.accordion-tabs {
-  margin: 0 auto 40px auto;
-  width: 80%;
-}
-
-.tabs {
-  background: #FFFFFF;
-  display: flex;
+.accordion-tabs li {
+  list-style: none;
 }
 
 .tab {
-  align-items: center;
-  background: #F2F2F2;
-  border-bottom: 1px solid #D1D2D3;
-  display: flex;
-  height: 10vh;
-  justify-content: center;
-  width: 25%;
+  display: block;
+  flex-direction: row;
 }
 
-.tab:nth-child(-n+3) {
-  border-right: 1.5px solid #FFFFFF;
-}
-
-.active {
-  background: #FFFFFF;
-  border-bottom: none;
-  border-left: 1px solid #D1D2D3;
-  border-top: 1px solid #D1D2D3;
-  border-right: 1px solid #D1D2D3 !important;
-}
-
-.tab:hover {
-  cursor: pointer;
-}
-
-
-.tab-content {
-  border: 1px solid #D1D2D3;
-  border-top: none;
-  display: flex;
-  padding: 15px;
-}
-
-.mobile-tab {
+.tab-details {
+  background: #B3B3B3;
   display: none;
-}
-
-.all-tab-content {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px;
-}
-
-.content-details h3 {
-  border-bottom: 1px solid #D1D2D3;
-  padding: 0 0 20px 15px;
-}
-
-.picture {
-  background: #F2F2F2;
-  border: 1px solid #D1D2D3;
-  height: 300px;
-  width: 40%;
-}
-
-.content-details {
-  width: 50%;
-}
-
-.content-details p {
-  padding: 20px
-}
-
-/*-------------------  INDIVIDUAL TAB DETAILS ----------------*/
-
-.hidden {
-  display: none;
+  float: left;
+  overflow: hidden;
 }
 
 .view-code-btn {
@@ -135,66 +71,19 @@ header span {
   max-width: 500px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (min-width: 30em) {
 
-  .project-name {
-    font-size: 1.1em;
+  .accordion-tabs {
+    position: relative;
+    width: 80%;
   }
 
-  .project-name hr {
-    width: 60%;
-  }
-
-  .tab-content {
-    border: 1px solid #D1D2D3;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-  }
-
-  .mobile-tab {
-    background: #F2F2F2;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .mobile-tab h4 {
-    padding: 8px 40px;
-  }
-
-  .mobile-tab p {
-    padding: 8px 40px;
-  }
-
-  .tabs {
-    flex-direction: column;
+  .accordion-tabs li {
+    display: inline;
   }
 
   .tab {
-    display: none;
-  }
-
-  .all-tab-content {
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .tab-details:nth-child(-n+3) {
-    border-bottom: 2px solid #FFFFFF;
-  }
-
-  .mobile-hide {
-    display: none;
-  }
-
-  .picture {
-    background: #F2F2F2;
-    width: 100%;
-  }
-
-  .content-details {
-    width: 100%;
+    display: inline-block;
   }
 
 }
