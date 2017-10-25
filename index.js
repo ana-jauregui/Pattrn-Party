@@ -1,5 +1,12 @@
 $(document).ready( function() {
 
+  $('.accordion-tabs li a').each( (index, elem) => {
+
+    if (!$(elem).hasClass('active')) {
+      $(elem).siblings().hide();
+    }
+  })
+
   $('.accordion-tabs').children('li').first().children('a').addClass('active').next().addClass('open').show()
 
   $('.accordion-tabs').on('click', 'li > a', function() {
@@ -9,12 +16,12 @@ $(document).ready( function() {
       $('.accordion-tabs .open').removeClass('open').hide();
       $(this).next().toggleClass('open').toggle();
 
-      $('.accordion-tabs').find('.active').removeClass('.active');
-      $(this).addClass('.active');
-      
+      $('.accordion-tabs').find('.active').removeClass('active');
+      $(this).addClass('active');
+
     } else {
 
-      $('.accordion-tabs .open').removeClass('.open').hide();
+      $('.accordion-tabs .open').removeClass('open').hide();
       $(this).removeClass('active');
 
     }

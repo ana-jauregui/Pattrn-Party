@@ -1,16 +1,15 @@
 body {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  padding: 0;
-
   margin: 0;
+  padding: 0;
 }
 
 body a {
   text-decoration: none;
 }
 
-header {
+.main-header {
   background: #2F2235;
   color: #FFFFFF;
   display: flex;
@@ -65,7 +64,7 @@ header span {
   display: flex;
   height: 60px;
   justify-content: center;
-  margin: 60px auto 30px auto;
+  margin: auto;
   min-width: 300px;
   width: 80%;
   max-width: 500px;
@@ -74,16 +73,48 @@ header span {
 @media screen and (min-width: 30em) {
 
   .accordion-tabs {
+    background: #F2F2F2;
+    margin: auto;
+    padding: 0;
     position: relative;
     width: 80%;
   }
 
   .accordion-tabs li {
     display: inline;
+    padding: 0 10%;
   }
 
   .tab {
     display: inline-block;
+    height: 50px;
+    padding-top: 25px;
+  }
+
+  .tab-details {
+    background: #FFFFFF;
+    border-bottom: 1px solid #D1D2D3;
+    border-left: 1px solid #D1D2D3;
+    border-right: 1px solid #D1D2D3;
+    display: flex;
+    margin-bottom: 50px;
+  }
+
+  .inner-content {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+  }
+
+  .picture {
+    background: #F2F2F2;
+    border: 1px solid #D1D2D3;
+    height: 300px;
+    width: 40%;
+  }
+
+  .info {
+    width: 40%;
   }
 
 }
