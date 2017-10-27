@@ -14,11 +14,14 @@ body a {
   color: #FFFFFF;
   display: flex;
   justify-content: space-between;
-  /*padding: 0 40px 0 40px;*/
 }
 
 header h2, h3 {
   margin: 20px 40px;
+}
+
+.info h3 {
+  margin: 20px 0;
 }
 
 header span {
@@ -41,11 +44,19 @@ header span {
   width: 75%;
 }
 
+.accordion-tabs {
+  padding: 0;
+  margin: auto;
+  width: 80%;
+  text-align: center;
+}
+
 .accordion-tabs li {
   list-style: none;
 }
 
 .tab {
+  background: #F2F2F2;
   display: block;
   flex-direction: row;
 }
@@ -55,6 +66,13 @@ header span {
   display: none;
   float: left;
   overflow: hidden;
+}
+
+.picture {
+  background: #F2F2F2;
+  border: 1px solid;
+  height: 250px;
+  width: 90%;
 }
 
 .view-code-btn {
@@ -73,7 +91,9 @@ header span {
 @media screen and (min-width: 30em) {
 
   .accordion-tabs {
-    background: #F2F2F2;
+    border-top: 1px solid #D1D2D3;
+    /*border-right: 1px solid #D1D2D3;*/
+    /*border-left: 1px solid #D1D2D3;*/
     margin: auto;
     padding: 0;
     position: relative;
@@ -82,13 +102,25 @@ header span {
 
   .accordion-tabs li {
     display: inline;
-    padding: 0 10%;
+    padding: 0;
   }
 
   .tab {
+    background: #F2F2F2;
     display: inline-block;
-    height: 50px;
-    padding-top: 25px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    width: 24.56%;
+  }
+
+  .accordion-tabs:first-child a {
+    border-left: 1px solid #D1D2D3;
+
+  }
+
+  .tab.active {
+    background: #FFFFFF;
   }
 
   .tab-details {
@@ -114,6 +146,7 @@ header span {
   }
 
   .info {
+    text-align: left;
     width: 40%;
   }
 

@@ -12,6 +12,7 @@ $(document).ready( function() {
   $('.accordion-tabs').on('click', 'li > a', function() {
 
     if (!$(this).hasClass('active')) {
+      console.log($(this));
 
       $('.accordion-tabs .open').removeClass('open').hide();
       $(this).next().toggleClass('open').toggle();
