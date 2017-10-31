@@ -91,7 +91,7 @@ header span {
 @media screen and (min-width: 30em) {
 
   .accordion-tabs {
-    border-top: 1px solid #D1D2D3;
+    /*border-top: 1px solid #D1D2D3;*/
     /*border-right: 1px solid #D1D2D3;*/
     /*border-left: 1px solid #D1D2D3;*/
     margin: auto;
