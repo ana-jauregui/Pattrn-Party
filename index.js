@@ -1,18 +1,17 @@
 $(document).ready( function() {
 
-  $('.accordion-tabs li a').each( (index, elem) => {
+  $('.tab').each( (index, elem) => {
 
     if (!$(elem).hasClass('active')) {
-      $(elem).siblings().hide();
+      $(elem).siblings('article').hide();
     }
   })
 
-  $('.accordion-tabs').children('li').first().children('a').addClass('active').next().addClass('open').show()
+  $('.tab').first().addClass('active').next().addClass('open').show()
 
-  $('.accordion-tabs').on('click', 'li > a', function() {
+  $('.tab').on('click', function() {
 
     if (!$(this).hasClass('active')) {
-      console.log($(this));
 
       $('.accordion-tabs .open').removeClass('open').hide();
       $(this).next().toggleClass('open').toggle();
