@@ -9,6 +9,6 @@ $('.tab').on('click', function() {
   $('.tab span').text('+');
 
   $(this).find('span').text('-');
-  
+
   $(this).next().addClass('active-tab-details');
 })

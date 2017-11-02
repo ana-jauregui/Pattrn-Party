@@ -20,10 +20,6 @@ header h2, h3 {
   margin: 20px 40px;
 }
 
-.info h3 {
-  margin: 20px 0;
-}
-
 header span {
   color: #34D1D1;
 }
@@ -46,6 +42,10 @@ header span {
 
 
 /*------------------------------------------------------------------*/
+
+.info h3 {
+  margin: 20px 0;
+}
 
 section {
   display: flex;
@@ -141,5 +141,5 @@ section {
   .active-tab-details {
     order: 0;
   }
-  
+
 }
