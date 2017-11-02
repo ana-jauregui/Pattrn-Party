@@ -1,0 +1,31 @@
+nav {
+  align-items: center;
+  background-color: #D1D2D3;
+  display: flex;
+  height: 150px;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: 40px;
+  width: 85%;
+}
+
+.logo {
+  background-color: #F2F2F2;
+  border: 1px solid #666;
+  border-radius: 100px;
+  height: 100px;
+  width: 100px;
+}
+
+.nav-links-search {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  width: 85%;
+}
+
+.nav-link {
+  color: #666;
+  font-size: 20px;
+  text-decoration: none;
+}
