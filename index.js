@@ -1,62 +1,14 @@
-$('.tab').click((e) => {
+$('.tab').on('click', function() {
 
-  const target = $(e.target);
+  $('.tab').removeClass('active');
 
-  const className = ((target).text().split(' ')).join('').toLowerCase();
+  $('.tab-details').removeClass('active-tab-details');
 
-  if (target.is('.tab')) {
+  $(this).addClass('active');
 
-    $(`.${className}-details`).show()
+  $('.tab span').text('+');
 
-    $(`.${className}`).addClass('active')
-
-    $(`.${className}`).siblings().each((idx, el)  => {
-
-      const tabClass = $(el).text().split(' ').join('').toLowerCase()
-
-      $(`.${tabClass}`).removeClass('active')
-    })
-
-    target.siblings('div').each((i, elem) => {
-
-      const newClass = ($(elem).text()).split(' ').join('').toLowerCase()
-
-      $(`.${newClass}-details`).hide()
-    })
-  }
-})
-
-$(window).resize( () => {
-
-  if (window.matchMedia('(max-width: 750px)').matches) {
-
-    $('.tab-content').children().each((i, el) => {
-
-      $(el).show();
-      $(el).removeClass('hidden');
-    })
-  }
-
-    $('.mobile-tab').click((e) => {
-
-        const target = $(e.target);
-
-        const className = ('mob-' +  $(target).find('h4').text().split(' ').join('').toLowerCase())
-
-        if (target.is('.mobile-tab')) {
-
-          $(`.${className}-details`).show()
-
-          $(`.${className}`).toggleClass('selected')
-
-          if (!(target.hasClass('selected'))) {
-            $(`.${className}-details`).hide()
-          }
-
-          // target.parent().siblings().each((i, elem) => {
-          //   console.log($(elem).children());
-          // })
-        }
-    })
-  // }
+  $(this).find('span').text('-');
+  
+  $(this).next().addClass('active-tab-details');
 })
