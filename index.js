@@ -1,29 +1,14 @@
-$(document).ready( function() {
+$('.tab').on('click', function() {
 
-  $('.tab').each( (index, elem) => {
+  $('.tab').removeClass('active');
 
-    if (!$(elem).hasClass('active')) {
-      $(elem).siblings('article').hide();
-    }
-  })
+  $('.tab-details').removeClass('active-tab-details');
 
-  $('.tab').first().addClass('active').next().addClass('open').show()
+  $(this).addClass('active');
 
-  $('.tab').on('click', function() {
+  $('.tab span').text('+');
 
-    if (!$(this).hasClass('active')) {
-
-      $('.accordion-tabs .open').removeClass('open').hide();
-      $(this).next().toggleClass('open').toggle();
-
-      $('.accordion-tabs').find('.active').removeClass('active');
-      $(this).addClass('active');
-
-    } else {
-
-      $('.accordion-tabs .open').removeClass('open').hide();
-      $(this).removeClass('active');
-
-    }
-  });
-});
+  $(this).find('span').text('-');
+  
+  $(this).next().addClass('active-tab-details');
+})
