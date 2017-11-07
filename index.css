@@ -44,7 +44,9 @@ header span {
 /*------------------------------------------------------------------*/
 
 .info h3 {
+  border-bottom: 1px solid #D1D2D3;
   margin: 20px 0;
+  padding-bottom: 15px;
 }
 
 section {
@@ -70,7 +72,7 @@ section {
   border-bottom: 1px solid #D1D2D3;
   color: #666666;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 75px;
   list-style: none;
   text-align: center;
@@ -103,7 +105,7 @@ section {
 
 .picture {
   background: #F2F2F2;
-  border: 1px solid;
+  border: 1px solid #D1D2D3;
   height: 400px;
   width: 40%;
 }
@@ -112,6 +114,7 @@ section {
   width: 40%;
   display: flex;
   flex-direction: column;
+  font-size: 18px;
 }
 
 .view-code-btn {
@@ -130,7 +133,14 @@ section {
 @media screen and (max-width: 600px) {
 
   .tab {
+    border-bottom: 1.5px solid #FFF;
+    border-right: 1px solid #D1D2D3;
+    border-left: 1px solid #D1D2D3;
     width: 85%;
+  }
+
+  .tab:last-of-type {
+    border-bottom: 1px solid #D1D2D3;
   }
 
   .tab span {
@@ -140,6 +150,19 @@ section {
 
   .active-tab-details {
     order: 0;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .picture {
+    height: 250px;
+    width: 100%;
+  }
+
+  .info {
+    padding: 40px;
+    width: 100%;
   }
 
 }
