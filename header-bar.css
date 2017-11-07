@@ -21,11 +21,85 @@ nav {
   align-items: center;
   display: flex;
   justify-content: space-around;
-  width: 85%;
+  width: 80%;
 }
 
 .nav-link {
   color: #666;
   font-size: 20px;
   text-decoration: none;
+}
+
+.search {
+  background: #f2f2f2;
+  background-image: url('assets/magnifying-glass.svg');
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: 15px;
+  border: 1px solid #666;
+  color: #666;
+  font-family: inherit;
+  font-size: 0.9em;
+  height: 50px;
+  padding-left: 50px;
+  width: 200px;
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 1250px) {
+
+  nav {
+    justify-content: space-between;
+    padding: 0 30px;
+    position: relative;
+  }
+
+  .nav-links-search {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu {
+    color: #666;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 25px;
+  }
+
+  .open {
+    background-color: #F2F2F2;
+    width: 100%;
+    display: flex;
+    margin: 0 auto 50px;
+    position: absolute;
+    top: 150px;
+    left: 0;
+  }
+
+  .nav-link {
+    align-self: flex-start;
+    font-size: 25px;
+    margin: 20px;
+  }
+
+  .move-btn {
+    margin-bottom: 500px;
+  }
+
+  .search {
+    width: 95%;
+    margin-bottom: 20px;
+  }
+
+  #link-one {
+    margin-top: 40px;
+  }
+
+  #link-three {
+    margin-bottom: 40px;
+  }
+
 }

@@ -12,3 +12,9 @@ $('.tab').on('click', function() {
 
   $(this).next().addClass('active-tab-details');
 })
+
+
+$('.menu').on('click', function() {
+  $('.nav-links-search').toggleClass('open');
+  $('nav').toggleClass('move-btn');
+})
