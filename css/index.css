@@ -28,6 +28,7 @@ header span {
   align-items: center;
   font-size: 1.2em;
   display: flex;
+  margin: 50px auto;
   width: 100%;
 }
 
@@ -39,9 +40,6 @@ header span {
   margin: 0 20px 0 30px;
   width: 75%;
 }
-
-
-/*------------------------------------------------------------------*/
 
 .info h3 {
   border-bottom: 1px solid #D1D2D3;
@@ -124,7 +122,7 @@ section {
   display: flex;
   height: 60px;
   justify-content: center;
-  margin: auto;
+  margin: 70px auto 100px;
   min-width: 300px;
   width: 80%;
   max-width: 500px;
